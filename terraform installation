@@ -1,0 +1,32 @@
+sudo yum install wget
+sudo yum install unzip
+wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
+unzip https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip /opt
+sudo cp /opt/terraform /usr/local/bin/
+export PATH=$PATH:/usr/local/biin/
+terraform --version
+sudo vi /etc/.bashrc
+ enter path in the last line
+ export PATH=$PATH:/usr/local/bin
+ 
+ come out of file
+ 
+ aws configure
+ [ec2-user@ip-172-31-92-95 ~]$ aws configure
+AWS Access Key ID [None]: mounika
+AWS Secret Access Key [None]: mounika36
+Default region name [None]: us-east-1
+Default output format [None]:
+
+you can check the credentials
+cat /home/ec2-user/.aws/credentials
+
+
+[ec2-user@ip-172-31-92-95 ~]$ ls
+terraform_0.11.13_linux_amd64.zip  terraformfile
+[ec2-user@ip-172-31-92-95 ~]$ cd terraformfile
+[ec2-user@ip-172-31-92-95 terraformfile]$ ls
+providers.tf
+[ec2-user@ip-172-31-92-95 terraformfile]$ terraform init
+
+Initializing provider plugins...
